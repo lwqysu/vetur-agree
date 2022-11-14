@@ -14,6 +14,7 @@ import {
 import fs from 'fs';
 import { join } from 'path';
 import { getNuxtTagProvider } from './nuxtTags';
+import { getAgreeUITagProvider } from './agreeuiTags';
 import { normalizeFileNameResolve } from '../../../utils/paths';
 
 export let allTagProviders: IHTMLTagProvider[] = [
@@ -44,7 +45,8 @@ export function getTagProviderSettings(packagePath: string | undefined) {
     quasar: false, // Quasar v1+
     'quasar-framework': false, // Quasar pre v1
     nuxt: false,
-    gridsome: false
+    gridsome: false,
+    agreeui: true
   };
   try {
     if (!packagePath) {
@@ -94,6 +96,10 @@ export function getTagProviderSettings(packagePath: string | undefined) {
       // pushing dependency so we can check it
       // and enable Quasar later below in the for()
       dependencies['quasar-framework'] = '^0.0.17';
+    }
+    const agreeUITagProvider = getAgreeUITagProvider();
+    if (agreeUITagProvider) {
+      allTagProviders.push(agreeUITagProvider);
     }
     if (dependencies['nuxt'] || dependencies['nuxt-edge'] || devDependencies['nuxt'] || devDependencies['nuxt-edge']) {
       const nuxtTagProvider = getNuxtTagProvider(packageRoot);

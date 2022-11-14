@@ -14,7 +14,8 @@
   },
   "files": [
     "dist",
-    "bin"
+    "bin",
+    "vetur"
   ],
   "repository": {
     "type": "git",
