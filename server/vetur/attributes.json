@@ -1,1 +1,906 @@
-{ "foo-bar/foo-attr": { "description": "description of foo-attr" } }
+{
+  "aui-input/type": {
+    "description": "类型",
+    "options": ["text", "number", "password"]
+  },
+  "aui-input/placeholder": { "description": "输入框占位文本" },
+  "aui-input/disabled": { "description": "禁用" },
+  "aui-input/prefix-text": { "description": "输入框头部插入内容" },
+  "aui-input/suffix-text": { "description": "输入框尾部插入内容" },
+  "aui-input/readonly": {
+    "description": "是否只读",
+    "options": ["true", "false"]
+  },
+  "aui-input/label": { "description": "输入框关联的label文字" },
+  "aui-input/position": {
+    "description": "label位置",
+    "options": ["left", "top"]
+  },
+  "aui-input/popover-type": {
+    "description": "弹出提示类型",
+    "options": ["phone", "amount", "account", "text", "chinese"]
+  },
+  "aui-input/popover-title": { "description": "弹出提示标题" },
+  "aui-input/popover-content": { "description": "弹出提示内容" },
+  "aui-input/popper-class": { "description": "为弹出提示增加类名" },
+  "aui-input/maxlength": { "description": "最大输入长度" },
+  "aui-input/visible": {
+    "description": "是否显示",
+    "options": ["true", "false"]
+  },
+  "aui-input/requisite": {
+    "description": "是否必输",
+    "options": ["true", "false"]
+  },
+  "aui-input/validator-test": { "description": "校验规则" },
+  "aui-input/prompt-information": { "description": "校验错误提示语" },
+  "aui-input/picture": { "description": "picture校验" },
+  "aui-input/symbol": { "description": "必输标记" },
+  "aui-input/is-sql": {
+    "description": "是否sql过滤",
+    "options": ["true", "false"]
+  },
+  "aui-input/back-trigger": {
+    "description": "是否向上触发blur事件&lt;使用foncusmanager有效&gt;",
+    "options": ["true", "false"]
+  },
+  "aui-input/no-minuts": {
+    "description": "配合 picture 规则使用，控制 0 和 9 规则是否可以输入负号",
+    "options": ["true ", " false"]
+  },
+  "aui-input/blur": { "description": "在 Input 失去焦点时触发" },
+  "aui-input/focus": { "description": "在 Input 获得焦点时触发" },
+  "aui-input/change": { "description": "在 Input 值改变时触发" },
+  "aui-search-menu/background-color": {
+    "description": "菜单的背景色（仅支持 hex 格式）"
+  },
+  "aui-search-menu/text-color": {
+    "description": "菜单的文字颜色（仅支持 hex 格式）"
+  },
+  "aui-search-menu/default-active": { "description": "当前激活菜单的 index" },
+  "aui-search-menu/router": {
+    "description": "是否使用 vue-router 的模式，启用该模式会在激活导航时以 index 作为 path 进行路由跳转"
+  },
+  "aui-search-menu/select": { "description": "菜单激活回调" },
+  "aui-search-menu/open": { "description": "subsearch 展开的回调" },
+  "aui-search-menu/close": { "description": "subsearch 收起的回调" },
+  "aui-date/popover-title": { "description": "悬浮提示标题" },
+  "aui-date/popover-content": { "description": "悬浮提示内容" },
+  "aui-date/popper-class": { "description": "为悬浮提示增加类名" },
+  "aui-date/label": { "description": "日期框说明" },
+  "aui-date/requisite": {
+    "description": "是否必输",
+    "options": ["true ", " false"]
+  },
+  "aui-date/disabled": {
+    "description": "是否禁用",
+    "options": ["true ", " false"]
+  },
+  "aui-date/symbol": { "description": "必输标记" },
+  "aui-date/position": {
+    "description": "label 位置",
+    "options": ["left ", " top"]
+  },
+  "aui-date/readonly": {
+    "description": "是否只读",
+    "options": ["true ", " false"]
+  },
+  "aui-date/placeholder": { "description": "日期框占位描述" },
+  "aui-date/back-trigger": {
+    "description": "是否向上触发 blur 事件",
+    "options": ["true ", " false"]
+  },
+  "aui-date/noinput": {
+    "description": "只读（不可输入，可以下拉选择日期）",
+    "options": ["true ", " false"]
+  },
+  "aui-date/clearable": {
+    "description": "是否显示清除按钮",
+    "options": ["true ", " false"]
+  },
+  "aui-date/start-placeholder": {
+    "description": "范围选择时开始日期的占位内容"
+  },
+  "aui-date/end-placeholder": { "description": "范围选择时结束日期的占位内容" },
+  "aui-date/type": {
+    "description": "显示类型",
+    "options": ["year ", " month ", " date ", " daterange"]
+  },
+  "aui-date/format": { "description": "显示在输入框中的格式" },
+  "aui-date/onPick": {
+    "description": "选中日期后会执行的回调，只有当 daterange 才生效"
+  },
+  "aui-date/disabledDate": {
+    "description": "自定义标记特定日期是否应该禁用，返回 true 表示禁用，false 表示不禁用，不返回表示和原有逻辑一致(这样不影响和 disable-weekend 等禁用属性同时使用)"
+  },
+  "aui-date/default-time": {
+    "description": "范围选择时选中日期所使用的当日内具体时刻(数组，长度为 2，每项值为字符串，形如 12:00:00，第一项指定开始日期的时刻，第二项指定结束日期的时刻，不指定会使用时刻 00:00:00)"
+  },
+  "aui-date/value-format": {
+    "description": "可选，绑定值的格式。不指定则绑定值为 Date 对象"
+  },
+  "aui-date/default-value": {
+    "description": "可选，设置打开日期面板中显示的当天日期"
+  },
+  "aui-date/enable-picker": {
+    "description": "可选，是否可以打开日期选择面板",
+    "options": ["true ", " false"]
+  },
+  "aui-date/change": { "description": "用户确认选定的值时触发组件绑定值" },
+  "aui-date/blur": { "description": "失去焦点时触发" },
+  "aui-date/focus": { "description": "获取焦点时触发" },
+  "aui-table/head-data": { "description": "表头数据" },
+  "aui-table/data": { "description": "表格数据" },
+  "aui-table/btn-group": { "description": "操作按钮" },
+  "aui-table/picture": { "description": "输入控制" },
+  "aui-table/column-formatter": { "description": "用来格式化内容" },
+  "aui-table/is-edit": {
+    "description": "是否可编辑",
+    "options": ["true", "false"]
+  },
+  "aui-table/is-add": {
+    "description": "是否可增加空白行",
+    "options": ["true", "false"]
+  },
+  "aui-table/disabled": {
+    "description": "是否禁用",
+    "options": ["true", "false"]
+  },
+  "aui-table/default-addlength": {
+    "description": "表格数据为空时默认增加可编辑数据条数,is-add=true 生效"
+  },
+  "aui-table/cols-hide": { "description": "隐藏的列数据" },
+  "aui-table/combination-key": { "description": "表格绑定的快捷键列表" },
+  "aui-table/highlight-current-row": {
+    "description": "是否要高亮当前行",
+    "options": ["true", "false"]
+  },
+  "aui-table/auto-add-row": {
+    "description": "空白表格是否自动添加空白行",
+    "options": ["true", "false"]
+  },
+  "aui-table/empty-text": { "description": "空数据时显示的文本内容" },
+  "aui-table/show-summary": {
+    "description": "是否在表尾显示合计行",
+    "options": ["true", "false"]
+  },
+  "aui-table/summary-method": { "description": "自定义的合计计算方法" },
+  "aui-table/text-align": {
+    "description": "对齐方式",
+    "options": ["left", "center", "right"]
+  },
+  "aui-table/pagingType": {
+    "description": "分页组件类型",
+    "options": ["simple", " complex"]
+  },
+  "aui-table/page-size": { "description": "分页组件每页显示条目个数" },
+  "aui-table/current-page-index": { "description": "分页组件当前页数" },
+  "aui-table/pagination-layout": {
+    "description": "分页组件组件布局，子组件名用逗号分隔"
+  },
+  "aui-table/pagination-page-sizes": {
+    "description": "分页组件每页显示个数选择器的选项设置"
+  },
+  "aui-table/pagination-prev-text": {
+    "description": "分页组件替代图标显示的上一页文字"
+  },
+  "aui-table/pagination-next-text": {
+    "description": "分页组件替代图标显示的下一页文字"
+  },
+  "aui-table/total-num": { "description": "分页组件总数" },
+  "aui-table/status-column-type": {
+    "description": "表格序列的类型",
+    "options": ["selection", "radio", "index ", "expand"]
+  },
+  "aui-table/pagination-show": {
+    "description": "内置分页器是否显示",
+    "options": ["true", "false"]
+  },
+  "aui-table/tile-operate-button": {
+    "description": "操作列按钮是否平铺",
+    "options": ["true", "false"]
+  },
+  "aui-table/doubleClick": {
+    "description": "是否启用切换行编辑的状态",
+    "options": ["true", "false"]
+  },
+  "aui-table/select-all": {
+    "description": "当用户手动勾选全选 Checkbox 时触发的事件"
+  },
+  "aui-table/selection-change": {
+    "description": "当选择项发生变化时会触发该事件"
+  },
+  "aui-table/cell-mouse-enter": {
+    "description": "当单元格 hover 进入时会触发该事件"
+  },
+  "aui-table/cell-mouse-leave": {
+    "description": "当单元格 hover 退出时会触发该事件"
+  },
+  "aui-table/cell-click": { "description": "当某个单元格被点击时会触发该事件" },
+  "aui-table/cell-dblclick": {
+    "description": "当某个单元格被双击击时会触发该事件"
+  },
+  "aui-table/row-click": { "description": "当某一行被点击时会触发该事件" },
+  "aui-table/row-contextmenu": {
+    "description": "当某一行被鼠标右键点击时会触发该事件"
+  },
+  "aui-table/row-dblclick": { "description": "当某一行被双击时会触发该事件" },
+  "aui-table/header-click": {
+    "description": "当某一列的表头被点击时会触发该事件"
+  },
+  "aui-table/header-contextmenu": {
+    "description": "当某一列的表头被鼠标右键点击时触发该事件"
+  },
+  "aui-table/sort-change": {
+    "description": "当表格的排序条件发生变化的时候会触发该事件"
+  },
+  "aui-table/filter-change": {
+    "description": "当表格的筛选条件发生变化的时候会触发该事件，参数的值是一个对象，对象的 key 是 column 的 columnKey，对应的 value 为用户选择的筛选条件的数组。"
+  },
+  "aui-table/current-radio-change": {
+    "description": "仅对 type=radio 的列有效,当用户手动勾选单选模式的 Checkbox 时触发的事件"
+  },
+  "aui-table/size-change": {
+    "description": "分页组件中每页显示行数发生变化时触发该事件"
+  },
+  "aui-table/current-page-change": {
+    "description": "currentPage 改变时会触发"
+  },
+  "aui-table/click-button": { "description": "表格行内按钮触发事件" },
+  "aui-table/cellBlur": { "description": "光标离开表格栏位触发此事件" },
+  "aui-table/cellChange": { "description": "表格栏位值发生变化时触发的事件" },
+  "aui-table/combination": {
+    "description": "在表格内按表格自定义快捷键触发此事件"
+  },
+  "aui-table/previous-page": {
+    "description": "简单分页工具的上一步的事件回调"
+  },
+  "aui-table/next-page": { "description": "简单分页工具下一步的事件回调" },
+  "aui-select/change": { "description": "选中值发生变化时触发" },
+  "aui-select/blur": { "description": "当 input 失去焦点时触发" },
+  "aui-select/focus": { "description": "当 input 获得焦点时触发" },
+  "aui-select/remove-tag": { "description": "多选模式下移除tag时触发" },
+  "aui-select/clear": {
+    "description": "可清空的单选模式下用户点击清空按钮时触发"
+  },
+  "aui-cascader/readonly": {
+    "description": "是否只读",
+    "options": ["true", "false"]
+  },
+  "aui-cascader/label": { "description": "输入框说明" },
+  "aui-cascader/disabled": { "description": "是否禁用" },
+  "aui-cascader/visible": { "description": "是否显示" },
+  "aui-cascader/requisite": {
+    "description": "是否必输",
+    "options": ["true", "false"]
+  },
+  "aui-cascader/placeholder": { "description": "输入框占位文本" },
+  "aui-cascader/symbol": { "description": "必输标记" },
+  "aui-cascader/position": {
+    "description": "label位置",
+    "options": ["left", "top"]
+  },
+  "aui-cascader/back-trigger": {
+    "description": "是否向上触发blur事件",
+    "options": ["true", "false"]
+  },
+  "aui-cascader/options": {
+    "description": [
+      {
+        "text": "可选项数据源，键名可通过 <code>props<",
+        "value": "可选项数据源，键名可通过 <code>props<"
+      },
+      { "text": "code> 属性配置", "value": "code> 属性配置" }
+    ]
+  },
+  "aui-cascader/props": { "description": "配置选项，具体见下表" },
+  "aui-cascader/clearable": { "description": "是否支持清空选项" },
+  "aui-cascader/expand-trigger": {
+    "description": "次级菜单的展开方式",
+    "options": ["click ", " hover"]
+  },
+  "aui-cascader/debounce": { "description": "搜索关键词输入的去抖延迟，毫秒" },
+  "aui-cascader/change-on-select": {
+    "description": "是否允许选择任意一级的选项"
+  },
+  "aui-cascader/popover-type": {
+    "description": "弹出提示类型",
+    "options": ["phone", "amount", "account"]
+  },
+  "aui-cascader/popover-title": { "description": "弹出提示标题" },
+  "aui-cascader/popover-content": { "description": "弹出提示内容" },
+  "aui-cascader/popper-class": { "description": "为弹出提示增加类名" },
+  "aui-cascader/prompt-information": { "description": "校验错误提示语" },
+  "aui-cascader/validator-test": { "description": "校验规则" },
+  "aui-cascader/multiple": {
+    "description": "是否多选",
+    "options": ["true", "false"]
+  },
+  "aui-cascader/change": { "description": "当绑定值变化时触发的事件" },
+  "aui-cascader/active-item-change": {
+    "description": "当父级选项变化时触发的事件，仅在 change-on-select 为 false 时可用"
+  },
+  "aui-cascader/blur": { "description": "在 Cascader 失去焦点时触发" },
+  "aui-cascader/focus": { "description": "在 Cascader 获得焦点时触发" },
+  "aui-alert/title": { "description": "标题" },
+  "aui-alert/type": {
+    "description": "主题",
+    "options": ["success", "warning", "info", "error"]
+  },
+  "aui-alert/description": {
+    "description": "辅助性文字。也可通过默认 slot 传入"
+  },
+  "aui-alert/closable": { "description": "是否可关闭" },
+  "aui-alert/center": { "description": "文字是否居中" },
+  "aui-alert/close-text": { "description": "关闭按钮自定义文本" },
+  "aui-alert/show-icon": { "description": "是否显示图标" },
+  "aui-alert/close": { "description": "关闭alert时触发的事件" },
+  "aui-button/type": {
+    "description": "类型",
+    "options": ["primary ", " success ", " warning ", " danger"]
+  },
+  "aui-button/plain": {
+    "description": "是否朴素按钮",
+    "options": ["true", "false"]
+  },
+  "aui-button/corner-radius": { "description": "是否圆角按钮" },
+  "aui-button/loading": {
+    "description": "是否加载中状态",
+    "options": ["true", "false"]
+  },
+  "aui-button/disabled": {
+    "description": "是否禁用状态",
+    "options": ["true", "false"]
+  },
+  "aui-button/throttle-time": { "description": "截流时间" },
+  "aui-button/click": { "description": "点击事件" },
+  "aui-cascader-menu/options": {
+    "description": "可选项数据源，键名可通过 props 属性配置"
+  },
+  "aui-cascader-menu/props": { "description": "配置选项，具体见下表" },
+  "aui-cascader-menu/value": { "description": "选中项绑定值" },
+  "aui-cascader-menu/popper-class": { "description": "自定义浮层类名" },
+  "aui-cascader-menu/placeholder": { "description": "输入框占位文本" },
+  "aui-cascader-menu/expand-trigger": {
+    "description": "次级菜单的展开方式",
+    "options": ["click", "hover"]
+  },
+  "aui-cascader-menu/show-all-levels": {
+    "description": "输入框中是否显示选中值的完整路径"
+  },
+  "aui-cascader-menu/debounce": {
+    "description": "搜索关键词输入的去抖延迟，毫秒"
+  },
+  "aui-cascader-menu/change-on-select": {
+    "description": "是否允许选择任意一级的选项"
+  },
+  "aui-cascader-menu/size": {
+    "description": "尺寸",
+    "options": ["medium", "small", "mini"]
+  },
+  "aui-cascader-menu/suffix": {
+    "description": "当前项是叶子节点时，作为后缀符号显示"
+  },
+  "aui-cascader-menu/multiple": { "description": "支持多选功能" },
+  "aui-cascader-menu/change": { "description": "当绑定值变化时触发的事件" },
+  "aui-cascader-menu/active-item-change": {
+    "description": "当父级选项变化时触发的事件，仅在 change-on-select 为 false 时可用"
+  },
+  "aui-cascader-menu/blur": { "description": "在 Cascader 失去焦点时触发" },
+  "aui-cascader-menu/focus": { "description": "在 Cascader 获得焦点时触发" },
+  "aui-checkbox/label": { "description": "标题" },
+  "aui-checkbox/disabled": { "description": "是否禁用" },
+  "aui-checkbox/min": { "description": "可被勾选的 checkbox 的最小数量" },
+  "aui-checkbox/max": { "description": "可被勾选的 checkbox 的最大数量" },
+  "aui-checkbox/options": { "description": "每个选项属性" },
+  "aui-checkbox/indeterminate": {
+    "description": "设置 indeterminate 状态，只负责样式控制"
+  },
+  "aui-checkbox/requisite": { "description": "是否为必选" },
+  "aui-checkbox/change": { "description": "当绑定值变化时触发的事件" },
+  "aui-color-picker/disabled": {
+    "description": "是否禁用",
+    "options": ["true", "false"]
+  },
+  "aui-color-picker/change": { "description": "当绑定值变化时触发" },
+  "aui-count-down/type": {
+    "description": "显示样式,数字或时间",
+    "options": ["number", "date"]
+  },
+  "aui-count-down/format": { "description": "%D 天 %H 小时 %M 分 %S 秒" },
+  "aui-count-down/value": { "description": "时间，秒为单位" },
+  "aui-count-down/start": { "description": "是否开始计数" },
+  "aui-count-down/on-end": { "description": "倒计时结束时的回调" },
+  "aui-date-picker/readonly": { "description": "完全只读" },
+  "aui-date-picker/disabled": { "description": "禁用" },
+  "aui-date-picker/clearable": { "description": "是否显示清除按钮" },
+  "aui-date-picker/size": { "description": "输入框尺寸" },
+  "aui-date-picker/label": { "description": "输入框说明" },
+  "aui-date-picker/requisite": {
+    "description": "是否必输",
+    "options": ["true", "false"]
+  },
+  "aui-date-picker/property": { "description": "校验的v-model" },
+  "aui-date-picker/symbol": { "description": "必输标记" },
+  "aui-date-picker/position": {
+    "description": "label位置",
+    "options": ["left", "top"]
+  },
+  "aui-date-picker/placeholder": { "description": "非范围选择时的占位内容" },
+  "aui-date-picker/start-placeholder": {
+    "description": "范围选择时开始日期的占位内容"
+  },
+  "aui-date-picker/end-placeholder": {
+    "description": "范围选择时结束日期的占位内容"
+  },
+  "aui-date-picker/type": {
+    "description": "显示类型",
+    "options": [
+      "year",
+      "month",
+      "date",
+      "week",
+      " datetime",
+      "datetimerange",
+      "daterange"
+    ]
+  },
+  "aui-date-picker/format": { "description": "显示在输入框中的格式" },
+  "aui-date-picker/picker-options": {
+    "description": "当前时间日期选择器特有的选项参考下表"
+  },
+  "aui-date-picker/range-separator": { "description": "选择范围时的分隔符" },
+  "aui-date-picker/default-value": {
+    "description": "可选，选择器打开时默认显示的时间"
+  },
+  "aui-date-picker/default-time": {
+    "description": "范围选择时选中日期所使用的当日内具体时刻"
+  },
+  "aui-date-picker/value-format": {
+    "description": "可选，绑定值的格式。不指定则绑定值为 Date 对象"
+  },
+  "aui-date-picker/back-trigger": {
+    "description": "是否向上触发blur事件",
+    "options": ["true", "false"]
+  },
+  "aui-date-picker/change": { "description": "用户确认选定的值时触发" },
+  "aui-date-picker/blur": { "description": "当 input 失去焦点时触发" },
+  "aui-date-picker/focus": { "description": "当 input 获得焦点时触发" },
+  "aui-menu-item/index": { "description": "唯一标志" },
+  "aui-menu-item/route": { "description": "同 vue-router 路径对象" },
+  "aui-menu-item/disabled": { "description": "是否禁用" },
+  "aui-menu-item/click": { "description": "在点击时触发, argu:vue实例" },
+  "aui-pagination/background": { "description": "是否为分页按钮添加背景色" },
+  "aui-pagination/page-size": { "description": "每页显示条目个数" },
+  "aui-pagination/total": { "description": "总条目数" },
+  "aui-pagination/current-page": {
+    "description": "当前页数，支持 .sync 修饰符"
+  },
+  "aui-pagination/layout": {
+    "description": "组件布局，子组件名用逗号分隔",
+    "options": ["sizes", "prev", "pager", "next", "jumper", "-&gt;", "total"]
+  },
+  "aui-pagination/page-sizes": {
+    "description": "每页显示个数选择器的选项设置"
+  },
+  "aui-pagination/size-change": { "description": "pageSize 改变时会触发" },
+  "aui-pagination/current-change": {
+    "description": "currentPage 改变时会触发"
+  },
+  "aui-progress/percentage": { "description": "百分比（必填）" },
+  "aui-progress/type": {
+    "description": "进度条类型",
+    "options": ["line", "circle"]
+  },
+  "aui-progress/stroke-width": { "description": "进度条的宽度，单位 px" },
+  "aui-progress/stroke-color": { "description": "线条颜色" },
+  "aui-progress/trail-color": { "description": "背景线条颜色" },
+  "aui-progress/text-inside": {
+    "description": "进度条显示文字内置在进度条内（只在 type=line 时可用）"
+  },
+  "aui-progress/hint": {
+    "description": "进度条当前状态",
+    "options": ["success", "error", "warning"]
+  },
+  "aui-progress/circle-width": {
+    "description": "环形进度条画布宽度（只在 type=circle 时可用）"
+  },
+  "aui-progress/show-text": { "description": "是否显示进度条文字内容" },
+  "aui-radio/label": { "description": "标题说明" },
+  "aui-radio/disabled": { "description": "是否禁用" },
+  "aui-radio/options": {
+    "description": "可选列表，可以用字符串组成的数组或者 key=&gt;value 的形式"
+  },
+  "aui-radio/change": { "description": "绑定值变化时触发的事件" },
+  "aui-radio-button/v-model": { "description": "选中单选框按钮label值" },
+  "aui-radio-button/label": { "description": "Radio 的 value" },
+  "aui-radio-button/disabled": { "description": "是否禁用" },
+  "aui-radio-button/name": { "description": "原生 name 属性" },
+  "aui-roll/step": { "description": "数值越大速度滚动越快" },
+  "aui-roll/title": { "description": "公告栏标题" },
+  "aui-roll/height": { "description": "自定义高度(px)" },
+  "aui-roll/hoverStop": { "description": "是否启用鼠标 hover 控制" },
+  "aui-roll/direction": { "description": "滚动方向" },
+  "aui-roll/interval": { "description": "单步停止等待时间" },
+  "aui-roll/autoPlay": {
+    "description": "是否自动播放使用 switch 切换时候需要置为 false"
+  },
+  "aui-roll/duration": { "description": "单步切换的动画时间(ms)" },
+  "aui-roll/ScrollEnd": { "description": "一次滚动完成的回调事件" },
+  "aui-rate/max": { "description": "最大分值" },
+  "aui-rate/disabled": { "description": "是否为只读" },
+  "aui-rate/allow-half": { "description": "是否允许半选" },
+  "aui-rate/colors": {
+    "description": "icon 的颜色数组，共有 3 个元素，为 3 个分段所对应的颜色"
+  },
+  "aui-rate/space": { "description": "间隙" },
+  "aui-rate/change": { "description": "分值改变时触发" },
+  "aui-option/value": { "description": "选项的值" },
+  "aui-option/label": {
+    "description": "选项的标签,若不设置则默认与 value 相同"
+  },
+  "aui-option/disabled": { "description": "是否禁用" },
+  "aui-option/focus": { "description": "使 input 获取焦点" },
+  "aui-slider/min": { "description": "最小值" },
+  "aui-slider/max": { "description": "最大值" },
+  "aui-slider/disabled": { "description": "是否禁用" },
+  "aui-slider/step": { "description": "步长" },
+  "aui-slider/show-input": {
+    "description": "是否显示输入框，仅在非范围选择时有效"
+  },
+  "aui-slider/show-input-controls": {
+    "description": "在显示输入框的情况下，是否显示输入框的控制按钮"
+  },
+  "aui-slider/show-breakpoint": { "description": "是否显示间断点" },
+  "aui-slider/show-tooltip": { "description": "是否显示 tooltip" },
+  "aui-slider/format-tooltip": { "description": "格式化 tooltip message" },
+  "aui-slider/direction": {
+    "description": "是否竖向模式",
+    "options": ["horizontal", "vertical"]
+  },
+  "aui-slider/length": { "description": "滑块长度" },
+  "aui-slider/change": {
+    "description": "值改变时触发（使用鼠标拖曳时，只在松开鼠标后触发）"
+  },
+  "aui-step-item/title": { "description": "标题" },
+  "aui-step-item/description": { "description": "描述性文字" },
+  "aui-step-item/icon": {
+    "description": "图标, argu:传入 icon 的 class 全名来自定义 icon，也支持 slot 方式写入"
+  },
+  "aui-step-item/status": {
+    "description": "设置当前步骤的状态,不设置则根据 steps 确定状态, argu:wait / process / finish / error / success",
+    "options": ["wait", "process", "finish", "error", "success"]
+  },
+  "aui-switch/disabled": { "description": "是否禁用" },
+  "aui-switch/value-map": {
+    "description": "用于自定义 false 和 true 映射的实际值，用于方便处理比如接口返回了 0 1 这类非 boolean 值的情况"
+  },
+  "aui-switch/active-color": { "description": "switch 打开时的背景色" },
+  "aui-switch/inactive-color": { "description": "switch 关闭时的背景色" },
+  "aui-switch/change": { "description": "switch 状态发生变化时的回调函数" },
+  "aui-table-column/type": {
+    "description": "对应列的类型",
+    "options": ["selection", "radio", "index", "expand"]
+  },
+  "aui-table-column/index": { "description": "自定义索引" },
+  "aui-table-column/column-key": { "description": "column 的 key" },
+  "aui-table-column/label": { "description": "显示的标题" },
+  "aui-table-column/prop": { "description": "对应列内容的字段名" },
+  "aui-table-column/width": { "description": "对应列的宽度" },
+  "aui-table-column/min-width": { "description": "对应列的最小宽度" },
+  "aui-table-column/fixed": {
+    "description": "列是否固定在左侧或者右侧,true 表示固定在左侧",
+    "options": ["true", "left", "right"]
+  },
+  "aui-table-column/render-header": {
+    "description": "列标题 Label 区域渲染使用的 Function"
+  },
+  "aui-table-column/sortable": {
+    "description": "对应列是否可以排序",
+    "options": ["true", "false", "custom"]
+  },
+  "aui-table-column/sort-method": {
+    "description": "对数据进行排序的时候使用的方法"
+  },
+  "aui-table-column/sort-by": { "description": "指定数据按照哪个属性进行排序" },
+  "aui-table-column/resizable": {
+    "description": "对应列是否可以通过拖动改变宽度"
+  },
+  "aui-table-column/formatter": { "description": "用来格式化内容" },
+  "aui-table-column/show-overflow-tooltip": {
+    "description": "当内容过长被隐藏时显示 tooltip"
+  },
+  "aui-table-column/align": {
+    "description": "表格对齐方式",
+    "options": ["left", "center", "right"]
+  },
+  "aui-table-column/header-align": {
+    "description": "表头对齐方式",
+    "options": ["left", "center", "right"]
+  },
+  "aui-table-column/class-name": { "description": "列的 className" },
+  "aui-table-column/label-class-name": {
+    "description": "当前列标题的自定义类名"
+  },
+  "aui-table-column/selectable": {
+    "description": "仅对 type=selection 的列有效"
+  },
+  "aui-table-column/reserve-selection": {
+    "description": "仅对 type=selection 的列有效"
+  },
+  "aui-table-column/filters": { "description": "数据过滤的选项" },
+  "aui-table-column/filter-placement": { "description": "过滤弹出框的定位" },
+  "aui-table-column/filter-multiple": {
+    "description": "数据过滤的选项是否多选"
+  },
+  "aui-table-column/filter-method": { "description": "数据过滤使用的方法" },
+  "aui-table-column/filtered-value": { "description": "选中的数据过滤项" },
+  "aui-tag/type": {
+    "description": "主题",
+    "options": ["success", "info", "warning", "danger"]
+  },
+  "aui-tag/closable": { "description": "是否可关闭" },
+  "aui-tag/disable-transitions": { "description": "是否禁用渐变动画" },
+  "aui-tag/background-color": { "description": "背景色" },
+  "aui-tag/size": {
+    "description": "尺寸",
+    "options": ["medium ", " small ", " mini"]
+  },
+  "aui-tag/close": { "description": "关闭 Tag 时触发的事件" },
+  "aui-time-picker/readonly": { "description": "完全只读" },
+  "aui-time-picker/disabled": { "description": "禁用" },
+  "aui-time-picker/editable": { "description": "文本框可输入" },
+  "aui-time-picker/clearable": { "description": "是否显示清除按钮" },
+  "aui-time-picker/size": {
+    "description": "输入框尺寸",
+    "options": ["medium ", " small ", " mini"]
+  },
+  "aui-time-picker/placeholder": { "description": "非范围选择时的占位内容" },
+  "aui-time-picker/start-placeholder": {
+    "description": "范围选择时开始日期的占位内容"
+  },
+  "aui-time-picker/end-placeholder": {
+    "description": "范围选择时开始日期的占位内容"
+  },
+  "aui-time-picker/is-range": {
+    "description": [
+      {
+        "text": "是否为时间范围选择，仅对<code>&lt;aui-time-picker&gt;<",
+        "value": "是否为时间范围选择，仅对<code>&lt;aui-time-picker&gt;<"
+      },
+      { "text": "code>有效", "value": "code>有效" }
+    ]
+  },
+  "aui-time-picker/arrow-control": {
+    "description": [
+      {
+        "text": "是否使用箭头进行时间选择，仅对<code>&lt;aui-time-picker&gt;<",
+        "value": "是否使用箭头进行时间选择，仅对<code>&lt;aui-time-picker&gt;<"
+      },
+      { "text": "code>有效", "value": "code>有效" }
+    ]
+  },
+  "aui-time-picker/value": { "description": "绑定值" },
+  "aui-time-picker/align": {
+    "description": "对齐方式",
+    "options": ["left ", " center ", " right"]
+  },
+  "aui-time-picker/popper-class": { "description": "TimePicker 下拉框的类名" },
+  "aui-time-picker/picker-options": {
+    "description": "当前时间日期选择器特有的选项参考下表"
+  },
+  "aui-time-picker/range-separator": { "description": "选择范围时的分隔符" },
+  "aui-time-picker/value-format": {
+    "description": "可选，仅TimePicker时可用，绑定值的格式。不指定则绑定值为 Date 对象",
+    "options": [
+      "见<a href=\"#",
+      "zh-CN",
+      "component",
+      "date-picker#ri-qi-ge-shi\">日期格式<",
+      "a>"
+    ]
+  },
+  "aui-time-picker/default-value": {
+    "description": "可选，选择器打开时默认显示的时间",
+    "options": [
+      "可被<code>new Date()<",
+      "code>解析(TimePicker) ",
+      " 可选值(TimeSelect)"
+    ]
+  },
+  "aui-time-picker/name": { "description": "原生属性" },
+  "aui-time-picker/prefix-icon": { "description": "自定义头部图标的类名" },
+  "aui-time-picker/clear-icon": { "description": "自定义清空图标的类名" },
+  "aui-time-picker/组件绑定值": { "description": "用户确认选定的值时触发" },
+  "aui-time-picker/组件实例": { "description": "当 input 获得焦点时触发" },
+  "aui-time-select/readonly": { "description": "完全只读" },
+  "aui-time-select/disabled": { "description": "禁用" },
+  "aui-time-select/editable": { "description": "文本框可输入" },
+  "aui-time-select/clearable": { "description": "是否显示清除按钮" },
+  "aui-time-select/size": {
+    "description": "输入框尺寸",
+    "options": ["medium", "small", "mini"]
+  },
+  "aui-time-select/placeholder": { "description": "非范围选择时的占位内容" },
+  "aui-time-select/start-placeholder": {
+    "description": "范围选择时开始日期的占位内容"
+  },
+  "aui-time-select/end-placeholder": {
+    "description": "范围选择时结束日期的占位内容"
+  },
+  "aui-time-select/value": { "description": "绑定值(v-model)" },
+  "aui-time-select/align": {
+    "description": "对齐方式",
+    "options": ["left", "center", "right"]
+  },
+  "aui-time-select/popper-class": { "description": "TimePicker 下拉框的类名" },
+  "aui-time-select/picker-options": { "description": "当前时间日期选择器" },
+  "aui-time-select/range-separator": { "description": "选择范围时的分隔符" },
+  "aui-time-select/value-format": {
+    "description": "可选,仅TimePicker时可用,绑定值的格式。不指定则绑定值为 Date 对象"
+  },
+  "aui-time-select/default-value": {
+    "description": "可选,选择器打开时默认显示的时间"
+  },
+  "aui-time-select/name": { "description": "原生name属性" },
+  "aui-time-select/prefix-icon": { "description": "自定义头部图标的类名" },
+  "aui-time-select/clear-icon": { "description": "自定义清空图标的类名" },
+  "aui-time-select/start": { "description": "开始时间" },
+  "aui-time-select/end": { "description": "结束时间" },
+  "aui-time-select/step": { "description": "间隔时间" },
+  "aui-time-select/minTime": {
+    "description": "最小时间，小于该时间的时间段将被禁用"
+  },
+  "aui-time-select/maxTime": {
+    "description": "最大时间，大于该时间的时间段将被禁用"
+  },
+  "aui-time-select/focus": { "description": "当 input 获得焦点时触发" },
+  "aui-time-select/change": {
+    "description": "用户确认选定的值时触发 argu:组件绑定值"
+  },
+  "aui-time-select/blur": { "description": "当 input 失去焦点时触发" },
+  "aui-transfer/data": { "description": "Transfer 的数据源" },
+  "aui-transfer/filterable": { "description": "是否可搜索" },
+  "aui-transfer/filter-placeholder": { "description": "搜索框占位符" },
+  "aui-transfer/filter-method": { "description": "自定义搜索方法" },
+  "aui-transfer/titles": { "description": "自定义列表标题" },
+  "aui-transfer/button-texts": { "description": "自定义按钮文案" },
+  "aui-transfer/render-content": { "description": "自定义数据项渲染函数" },
+  "aui-transfer/format": { "description": "列表顶部勾选状态文案" },
+  "aui-transfer/props": { "description": "数据源的字段别名" },
+  "aui-transfer/left-default-checked": {
+    "description": "初始状态下左侧列表的已勾选项的 key 数组"
+  },
+  "aui-transfer/right-default-checked": {
+    "description": "初始状态下右侧列表的已勾选项的 key 数组"
+  },
+  "aui-transfer/change": { "description": "右侧列表元素变化时触发" },
+  "aui-tree/data": { "description": "展示数据" },
+  "aui-tree/empty-text": { "description": "内容为空的时候展示的文本" },
+  "aui-tree/node-key": {
+    "description": "每个树节点用来作为唯一标识的属性，整棵树应该是唯一的"
+  },
+  "aui-tree/render-after-expand": {
+    "description": "是否在第一次展开某个树节点后才渲染其子节点"
+  },
+  "aui-tree/load": {
+    "description": "加载子树数据的方法，仅当 lazy 属性为true 时生效"
+  },
+  "aui-tree/render-content": { "description": "树节点的内容区的渲染 Function" },
+  "aui-tree/default-expand-all": { "description": "是否默认展开所有节点" },
+  "aui-tree/default-expanded-keys": {
+    "description": "默认展开的节点的 key 的数组"
+  },
+  "aui-tree/show-checkbox": { "description": "节点是否可被选择" },
+  "aui-tree/check-strictly": {
+    "description": "在显示复选框的情况下，是否严格的遵循父子不互相关联的做法，默认为 false"
+  },
+  "aui-tree/default-checked-keys": {
+    "description": "默认勾选的节点的 key 的数组"
+  },
+  "aui-tree/filter-node-method": {
+    "description": "对树节点进行筛选时执行的方法，返回 true 表示这个节点可以显示，返回 false 则表示这个节点会被隐藏"
+  },
+  "aui-tree/accordion": { "description": "是否每次只打开一个同级树节点展开" },
+  "aui-tree/lazy": {
+    "description": "是否懒加载子节点，需与 load 方法结合使用"
+  },
+  "aui-tree/draggable": { "description": "是否开启拖拽节点功能" },
+  "aui-tree/allow-drag": { "description": "判断节点能否被拖拽" },
+  "aui-tree/allow-drop": {
+    "description": "拖拽时判定目标节点能否被放置。type 参数有三种情况：'prev'、'inner' 和 'next'，分别表示放置在目标节点前、插入至目标节点和放置在目标节点后"
+  },
+  "aui-tree/node-click": { "description": "节点被点击时的回调" },
+  "aui-tree/node-contextmenu": {
+    "description": "当某一节点被鼠标右键点击时会触发该事件"
+  },
+  "aui-tree/check-change": { "description": "节点选中状态发生变化时的回调" },
+  "aui-tree/node-expand": { "description": "节点被展开时触发的事件" },
+  "aui-tree/node-collapse": { "description": "节点被关闭时触发的事件" },
+  "aui-tree/node-drag-start": { "description": "节点开始拖拽时触发的事件" },
+  "aui-tree/node-drag-enter": { "description": "拖拽进入其他节点时触发的事件" },
+  "aui-tree/node-drag-leave": { "description": "拖拽离开某个节点时触发的事件" },
+  "aui-tree/node-drag-over": {
+    "description": "在拖拽节点时触发的事件（类似浏览器的 mouseover 事件）"
+  },
+  "aui-tree/node-drag-end": {
+    "description": "拖拽结束时（可能未成功）触发的事件"
+  },
+  "aui-tree/node-drop": { "description": "拖拽成功完成时触发的事件" },
+  "aui-qrcode/value": { "description": "内容" },
+  "aui-qrcode/bgColor": { "description": "背景色" },
+  "aui-qrcode/fgColor": { "description": "前景色(二维码颜色)" },
+  "aui-qrcode/type": {
+    "description": "二维码类型",
+    "options": ["\"img\"", "\"canvas\""]
+  },
+  "aui-bmap/queryShow": {
+    "description": "检索框",
+    "options": ["true", "false"]
+  },
+  "aui-bmap/setCenter": { "description": "设置中央位置" },
+  "aui-bmap/setZooming": { "description": "设置是否可缩放" },
+  "aui-bmap/setZoom": { "description": "设置缩放比例" },
+  "aui-bmap/addControl": { "description": "是否添加平移缩放控件" },
+  "aui-bmap/setDragging": { "description": "是否可拖拽" },
+  "aui-bmap/getDistacnce": { "description": "获取两个点的直线距离" },
+  "aui-bmap/addOverlay": { "description": "定义标注图标与文字" },
+  "aui-bmap/addTextInfoWindow": { "description": "自定义纯文本信息窗口" },
+  "aui-bmap/addComplexInfoWindow": { "description": "自定义复杂信息窗口" },
+  "aui-bmap/setTrajectory": { "description": "设置轨迹" },
+  "aui-bmap/walkingRouteSearch": { "description": "规划步行路线导航" },
+  "aui-bmap/drivingRouteSearch": { "description": "规划开车路线导航" },
+  "aui-bmap/removeAllOverlay": { "description": "清楚所有覆盖物" },
+  "aui-camera/get-base64-content": { "description": "获取base64字符串" },
+  "aui-calendar/value": { "description": "默认日期" },
+  "aui-calendar/disabled": { "description": "屏蔽日期" },
+  "aui-calendar/lunar": {
+    "description": "是否显示农历",
+    "options": ["true", "fasle"]
+  },
+  "aui-calendar/weeks": { "description": "自定义星期名称" },
+  "aui-calendar/months": { "description": "自定义月份" },
+  "aui-calendar/events": { "description": "自定义阴历事件" },
+  "aui-calendar/yangevents": { "description": "自定义阳历事件" },
+  "aui-clock/dateFormat": { "description": "年月日格式" },
+  "aui-clock/timeFormat": { "description": "时分秒格式" },
+  "aui-clock/date": { "description": "日期", "options": ["true", "false"] },
+  "aui-clock/time": { "description": "时间", "options": ["true", "false"] },
+  "aui-clock/week": { "description": "周", "options": ["true", "false"] },
+  "aui-clock/clock-class-name": { "description": "自定义样式" },
+  "aui-textarea/maxlength": { "description": "文本最大长度" },
+  "aui-textarea/rows": { "description": "显示行数" },
+  "aui-textarea/placeholder": { "description": "输入框占位文本" },
+  "aui-textarea/disabled": { "description": "禁用" },
+  "aui-textarea/readonly": {
+    "description": "是否只读",
+    "options": ["true", "false"]
+  },
+  "aui-textarea/label": { "description": "输入框关联的label文字" },
+  "aui-textarea/position": {
+    "description": "label位置",
+    "options": ["left", "top"]
+  },
+  "aui-textarea/requisite": {
+    "description": "是否必输",
+    "options": ["true", "false"]
+  },
+  "aui-textarea/validator-test": { "description": "校验规则" },
+  "aui-textarea/prompt-information": { "description": "校验错误提示语" },
+  "aui-textarea/symbol": { "description": "必输标记" },
+  "aui-textarea/focus": { "description": "获取焦点时触发" },
+  "aui-textarea/blur": { "description": "失去焦点时触发" },
+  "aui-signature/-": { "description": "获取base64字符串" },
+  "aui-search/placeholder": { "description": "输入框占位文本" },
+  "aui-search/disabled": { "description": "禁用" },
+  "aui-search/v-model": { "description": "必填值，输入绑定值" },
+  "aui-search/debounce": { "description": "获取输入建议的去抖延时" },
+  "aui-search/options": {
+    "description": "返回输入建议的方法，仅当你的输入建议数据 resolve 时，通过调用 callback(data:[]) 来返回它"
+  },
+  "aui-search/trigger-on-focus": {
+    "description": "是否在输入框 focus 时显示建议列表"
+  },
+  "aui-search/label": { "description": "输入框关联的label文字" },
+  "aui-search/max-lines": { "description": "搜索框的显示条数" }
+}

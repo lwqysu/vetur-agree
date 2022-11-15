@@ -1,1 +1,595 @@
-{ "foo-bar": { "description": "A foo tag", "attributes": ["foo-attr"] } }
+{
+  "aui-input": {
+    "description": "输入框 - 创建一个输入框",
+    "attributes": [
+      "type",
+      "placeholder",
+      "disabled",
+      "prefix-text",
+      "suffix-text",
+      "readonly",
+      "label",
+      "position",
+      "popover-type",
+      "popover-title",
+      "popover-content",
+      "popper-class",
+      "maxlength",
+      "visible",
+      "requisite",
+      "validator-test",
+      "prompt-information",
+      "picture",
+      "symbol",
+      "is-sql",
+      "back-trigger",
+      "no-minuts",
+      "blur",
+      "focus",
+      "change"
+    ]
+  },
+  "aui-search-menu": {
+    "description": "搜索菜单search-menu - 创建一个搜索菜单search-menu",
+    "attributes": [
+      "background-color",
+      "text-color",
+      "default-active",
+      "router",
+      "select",
+      "open",
+      "close"
+    ]
+  },
+  "aui-date": {
+    "description": "日期选择器 - 创建一个日期选择器",
+    "attributes": [
+      "popover-title",
+      "popover-content",
+      "popper-class",
+      "label",
+      "requisite",
+      "disabled",
+      "symbol",
+      "position",
+      "readonly",
+      "placeholder",
+      "back-trigger",
+      "noinput",
+      "clearable",
+      "start-placeholder",
+      "end-placeholder",
+      "type",
+      "format",
+      "onPick",
+      "disabledDate",
+      "default-time",
+      "value-format",
+      "default-value",
+      "enable-picker",
+      "change",
+      "blur",
+      "focus"
+    ]
+  },
+  "aui-table": {
+    "description": "表格 - 创建一个表格",
+    "attributes": [
+      "head-data",
+      "data",
+      "btn-group",
+      "picture",
+      "column-formatter",
+      "is-edit",
+      "is-add",
+      "disabled",
+      "default-addlength",
+      "cols-hide",
+      "combination-key",
+      "highlight-current-row",
+      "auto-add-row",
+      "empty-text",
+      "show-summary",
+      "summary-method",
+      "text-align",
+      "pagingType",
+      "page-size",
+      "current-page-index",
+      "pagination-layout",
+      "pagination-page-sizes",
+      "pagination-prev-text",
+      "pagination-next-text",
+      "total-num",
+      "status-column-type",
+      "pagination-show",
+      "tile-operate-button",
+      "doubleClick",
+      "select-all",
+      "selection-change",
+      "cell-mouse-enter",
+      "cell-mouse-leave",
+      "cell-click",
+      "cell-dblclick",
+      "row-click",
+      "row-contextmenu",
+      "row-dblclick",
+      "header-click",
+      "header-contextmenu",
+      "sort-change",
+      "filter-change",
+      "current-radio-change",
+      "size-change",
+      "current-page-change",
+      "click-button",
+      "cellBlur",
+      "cellChange",
+      "combination",
+      "previous-page",
+      "next-page"
+    ]
+  },
+  "aui-select": {
+    "description": "选择器 - 创建一个选择器",
+    "attributes": ["change", "blur", "focus", "remove-tag", "clear"]
+  },
+  "aui-cascader": {
+    "description": "级联选择器 - 创建一个级联选择器",
+    "attributes": [
+      "readonly",
+      "label",
+      "disabled",
+      "visible",
+      "requisite",
+      "placeholder",
+      "symbol",
+      "position",
+      "back-trigger",
+      "options",
+      "props",
+      "clearable",
+      "expand-trigger",
+      "debounce",
+      "change-on-select",
+      "popover-type",
+      "popover-title",
+      "popover-content",
+      "popper-class",
+      "prompt-information",
+      "validator-test",
+      "multiple",
+      "change",
+      "active-item-change",
+      "blur",
+      "focus"
+    ]
+  },
+  "aui-alert": {
+    "description": "警告提示 - 创建一个重要的提示信息",
+    "attributes": [
+      "title",
+      "type",
+      "description",
+      "closable",
+      "center",
+      "close-text",
+      "show-icon",
+      "close"
+    ]
+  },
+  "aui-button": {
+    "description": "按钮 - 创建一个按钮",
+    "attributes": [
+      "type",
+      "plain",
+      "corner-radius",
+      "loading",
+      "disabled",
+      "throttle-time",
+      "click"
+    ]
+  },
+  "aui-cascader-menu": {
+    "description": "级联选择菜单面板 - 创建一个级联选择菜单面板",
+    "attributes": [
+      "options",
+      "props",
+      "value",
+      "popper-class",
+      "placeholder",
+      "expand-trigger",
+      "show-all-levels",
+      "debounce",
+      "change-on-select",
+      "size",
+      "suffix",
+      "multiple",
+      "change",
+      "active-item-change",
+      "blur",
+      "focus"
+    ]
+  },
+  "aui-checkbox": {
+    "description": "多选框 - 创建一个多选框",
+    "attributes": [
+      "label",
+      "disabled",
+      "min",
+      "max",
+      "options",
+      "indeterminate",
+      "requisite",
+      "change"
+    ]
+  },
+  "aui-color-picker": {
+    "description": "颜色选择器 - 创建一个颜色选择器",
+    "attributes": ["disabled", "change"]
+  },
+  "aui-count-down": {
+    "description": "倒计时 - 创建一个倒计时",
+    "attributes": ["type", "format", "value", "start", "on-end"]
+  },
+  "aui-date-picker": {
+    "description": "日期选择器 - 创建一个日期选择器",
+    "attributes": [
+      "readonly",
+      "disabled",
+      "clearable",
+      "size",
+      "label",
+      "requisite",
+      "property",
+      "symbol",
+      "position",
+      "placeholder",
+      "start-placeholder",
+      "end-placeholder",
+      "type",
+      "format",
+      "picker-options",
+      "range-separator",
+      "default-value",
+      "default-time",
+      "value-format",
+      "back-trigger",
+      "change",
+      "blur",
+      "focus"
+    ]
+  },
+  "aui-menu-item": {
+    "description": "导航菜单item - 创建一个导航菜单item",
+    "attributes": ["index", "route", "disabled", "click"]
+  },
+  "aui-pagination": {
+    "description": "分页 - 创建一个分页",
+    "attributes": [
+      "background",
+      "page-size",
+      "total",
+      "current-page",
+      "layout",
+      "page-sizes",
+      "size-change",
+      "current-change"
+    ]
+  },
+  "aui-progress": {
+    "description": "进度条 - 创建一个进度条",
+    "attributes": [
+      "percentage",
+      "type",
+      "stroke-width",
+      "stroke-color",
+      "trail-color",
+      "text-inside",
+      "hint",
+      "circle-width",
+      "show-text"
+    ]
+  },
+  "aui-radio": {
+    "description": "单选框 - 创建一个单选框",
+    "attributes": ["label", "disabled", "options", "change"]
+  },
+  "aui-radio-button": {
+    "description": "单选框按钮 - 创建一个单选框按钮",
+    "attributes": ["v-model", "label", "disabled", "name"]
+  },
+  "aui-roll": {
+    "description": "滚动公告栏 - 创建一个滚动公告栏",
+    "attributes": [
+      "step",
+      "title",
+      "height",
+      "hoverStop",
+      "direction",
+      "interval",
+      "autoPlay",
+      "duration",
+      "ScrollEnd"
+    ]
+  },
+  "aui-rate": {
+    "description": "评分 - 创建一个评分",
+    "attributes": ["max", "disabled", "allow-half", "colors", "space", "change"]
+  },
+  "aui-option": {
+    "description": "选择器选项 - 创建一个选择器选项",
+    "attributes": ["value", "label", "disabled", "focus"]
+  },
+  "aui-slider": {
+    "description": "滑块 - 创建一个滑块",
+    "attributes": [
+      "min",
+      "max",
+      "disabled",
+      "step",
+      "show-input",
+      "show-input-controls",
+      "show-breakpoint",
+      "show-tooltip",
+      "format-tooltip",
+      "direction",
+      "length",
+      "change"
+    ]
+  },
+  "aui-step-item": {
+    "description": "步骤条item - 创建一个步骤条item",
+    "attributes": ["title", "description", "icon", "status"]
+  },
+  "aui-switch": {
+    "description": "开关 - 创建一个开关",
+    "attributes": [
+      "disabled",
+      "value-map",
+      "active-color",
+      "inactive-color",
+      "change"
+    ]
+  },
+  "aui-table-column": {
+    "description": "表格row - 创建一个表格row",
+    "attributes": [
+      "type",
+      "index",
+      "column-key",
+      "label",
+      "prop",
+      "width",
+      "min-width",
+      "fixed",
+      "render-header",
+      "sortable",
+      "sort-method",
+      "sort-by",
+      "resizable",
+      "formatter",
+      "show-overflow-tooltip",
+      "align",
+      "header-align",
+      "class-name",
+      "label-class-name",
+      "selectable",
+      "reserve-selection",
+      "filters",
+      "filter-placement",
+      "filter-multiple",
+      "filter-method",
+      "filtered-value"
+    ]
+  },
+  "aui-tag": {
+    "description": "标签 - 创建一个标签",
+    "attributes": [
+      "type",
+      "closable",
+      "disable-transitions",
+      "background-color",
+      "size",
+      "close"
+    ]
+  },
+  "aui-time-picker": {
+    "description": "任意时间选择器 - 创建一个时间选择器",
+    "attributes": [
+      "readonly",
+      "disabled",
+      "editable",
+      "clearable",
+      "size",
+      "placeholder",
+      "start-placeholder",
+      "end-placeholder",
+      "is-range",
+      "arrow-control",
+      "value",
+      "align",
+      "popper-class",
+      "picker-options",
+      "range-separator",
+      "value-format",
+      "default-value",
+      "name",
+      "prefix-icon",
+      "clear-icon",
+      "组件绑定值",
+      "组件实例",
+      "组件实例"
+    ]
+  },
+  "aui-time-select": {
+    "description": "固定时间选择器 - 创建一个固定时间选择器",
+    "attributes": [
+      "readonly",
+      "disabled",
+      "editable",
+      "clearable",
+      "size",
+      "placeholder",
+      "start-placeholder",
+      "end-placeholder",
+      "value",
+      "align",
+      "popper-class",
+      "picker-options",
+      "range-separator",
+      "value-format",
+      "default-value",
+      "name",
+      "prefix-icon",
+      "clear-icon",
+      "start",
+      "end",
+      "step",
+      "minTime",
+      "maxTime",
+      "focus",
+      "change",
+      "blur",
+      "focus"
+    ]
+  },
+  "aui-transfer": {
+    "description": "穿梭框 - 创建一个穿梭框",
+    "attributes": [
+      "data",
+      "filterable",
+      "filter-placeholder",
+      "filter-method",
+      "titles",
+      "button-texts",
+      "render-content",
+      "format",
+      "props",
+      "left-default-checked",
+      "right-default-checked",
+      "change"
+    ]
+  },
+  "aui-tree": {
+    "description": "树形控件 - 创建一个树形控件",
+    "attributes": [
+      "data",
+      "empty-text",
+      "node-key",
+      "render-after-expand",
+      "load",
+      "render-content",
+      "default-expand-all",
+      "default-expanded-keys",
+      "show-checkbox",
+      "check-strictly",
+      "default-checked-keys",
+      "filter-node-method",
+      "accordion",
+      "lazy",
+      "draggable",
+      "allow-drag",
+      "allow-drop",
+      "node-click",
+      "node-contextmenu",
+      "check-change",
+      "node-expand",
+      "node-collapse",
+      "node-drag-start",
+      "node-drag-enter",
+      "node-drag-leave",
+      "node-drag-over",
+      "node-drag-end",
+      "node-drop"
+    ]
+  },
+  "aui-qrcode": {
+    "description": "二维码 - 创建一个二维码",
+    "attributes": ["value", "bgColor", "fgColor", "type"]
+  },
+  "aui-bmap": {
+    "description": "百度地图 - 创建一个百度地图",
+    "attributes": [
+      "queryShow",
+      "setCenter",
+      "setZooming",
+      "setZoom",
+      "addControl",
+      "setDragging",
+      "setDragging",
+      "getDistacnce",
+      "addOverlay",
+      "addTextInfoWindow",
+      "addComplexInfoWindow",
+      "setTrajectory",
+      "walkingRouteSearch",
+      "drivingRouteSearch",
+      "removeAllOverlay"
+    ]
+  },
+  "aui-camera": {
+    "description": "拍照 - 创建一个拍照组件",
+    "attributes": ["get-base64-content"]
+  },
+  "aui-calculagraph": {
+    "description": "计时器 - 创建一个计时器组件",
+    "attributes": []
+  },
+  "aui-calendar": {
+    "description": "日历 - 创建一个日历组件",
+    "attributes": [
+      "value",
+      "disabled",
+      "lunar",
+      "weeks",
+      "months",
+      "events",
+      "yangevents"
+    ]
+  },
+  "aui-clock": {
+    "description": "时钟 - 创建一个时钟组件",
+    "attributes": [
+      "dateFormat",
+      "timeFormat",
+      "date",
+      "time",
+      "week",
+      "clock-class-name"
+    ]
+  },
+  "aui-textarea": {
+    "description": "文本域 - 创建一个文本域组件",
+    "attributes": [
+      "maxlength",
+      "rows",
+      "placeholder",
+      "disabled",
+      "readonly",
+      "label",
+      "position",
+      "requisite",
+      "validator-test",
+      "prompt-information",
+      "symbol",
+      "focus",
+      "blur"
+    ]
+  },
+  "aui-signature": {
+    "description": "签名 - 创建一个签名组件",
+    "attributes": ["-"]
+  },
+  "aui-search": {
+    "description": "搜索 - 创建一个搜索组件",
+    "attributes": [
+      "placeholder",
+      "disabled",
+      "v-model",
+      "debounce",
+      "options",
+      "trigger-on-focus",
+      "label",
+      "max-lines"
+    ]
+  }
+}
